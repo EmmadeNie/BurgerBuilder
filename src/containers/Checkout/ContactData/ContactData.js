@@ -15,10 +15,11 @@ class ContactData extends Component {
   };
 
   orderHandler = (event) => {
+    console.log("lala", this.props.ingredients);
     event.preventDefault();
     this.setState({ loading: true });
     const order = {
-      ingredients: this.state.ingredients,
+      ingredients: this.props.ingredients,
       price: this.props.price,
       customer: {
         name: "Max Schawrxz",
